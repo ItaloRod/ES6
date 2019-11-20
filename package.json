@@ -5,10 +5,11 @@
     "main": "index.js",
     "author": "Contribuidor do Yarn",
     "license": "MIT",
-    "dependencies":{
-        "@babel/core": "^7.0.0-beta.40",
-        "@babel/cli": "^7.0.0-beta.40",
-        "@babel/preset-env": "^7.0.0-beta.40"
+    "dependencies": {
+        "@babel/cli": "^7.6.2",
+        "@babel/core": "^7.6.2",
+        "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+        "@babel/preset-env": "^7.6.2"
     },
     "scripts": {
         "dev": "CHOKIDAR_USEPOLLING=true babel ./main.js -o ./bundle.js -w"

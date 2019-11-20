@@ -1,30 +1,52 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-alert('test');
-
-var Teste =
-/*#__PURE__*/
-function () {
-  function Teste() {
-    _classCallCheck(this, Teste);
-  }
-
-  _createClass(Teste, [{
-    key: "metodo",
-    value: function metodo() {}
-  }, {
-    key: "metodo2",
-    value: function metodo2() {}
-  }, {
-    key: "metodo3",
-    value: function metodo3() {}
-  }]);
-
-  return Teste;
-}();
+//1º Exercicio
+// class Usuario {
+//     constructor(email, senha, admin = false) {
+//         this.email = email
+//         this.senha = senha
+//         this.admin = admin
+//     }
+//     isAdmin() {
+//         return this.admin
+//     }
+// }
+// class Admin extends Usuario {
+//     constructor(email, senha) {
+//         super(email, senha, true)
+//     }
+// }
+// const User1 = new Usuario('email@teste.com', 'senha123')
+// const Adm1 = new Admin('email@teste.com', 'senha123')
+// console.log(User1.isAdmin())
+// console.log(Adm1.isAdmin())
+//2º Exercicio
+var usuarios = [{
+  nome: 'Diego',
+  idade: 23,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Gabriel',
+  idade: 15,
+  empresa: 'Rocketseat'
+}, {
+  nome: 'Lucas',
+  idade: 30,
+  empresa: 'Facebook'
+}];
+var age = usuarios.map(function (usuario) {
+  return usuario.idade;
+});
+var plus18 = usuarios.filter(function (usuario) {
+  return usuario.idade > 18;
+});
+var googleWorker = usuarios.find(function (usuario) {
+  return usuario.empresa == 'Google';
+});
+var moreAge = usuarios.map(function (usuario) {
+  usuario.idade *= 2;
+  return usuario;
+}).filter(function (usuario) {
+  return usuario.idade < 50;
+});
+console.log(age, plus18, googleWorker, moreAge);
