@@ -1,5 +1,5 @@
 module.exports = {
-    entry : './src/main.js',
+    entry : ['regenerator-runtime/runtime', './src/main.js'],
     output: {
         path: __dirname + '/public',
         filename: 'bundle.js',
@@ -9,6 +9,7 @@ module.exports = {
         host: '0.0.0.0',
         port: 3000,
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
